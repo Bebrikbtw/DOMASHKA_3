@@ -1,0 +1,11 @@
+public static void main(String[] args) {
+        Season myFavoriteSeason = Season.SUMMER;
+        System.out.printf("Мое любимое время года - %s, средняя температура - %d градусов, %s\n",
+                myFavoriteSeason.name(), myFavoriteSeason.getAvgTemperature(), myFavoriteSeason.getDescription());
+
+        for (Season season : Season.values()) {
+            System.out.printf("%s: средняя температура - %d градусов, %s\n",
+                    season.name(), season.getAvgTemperature(), season.getDescription());
+        }
+    }
+}
