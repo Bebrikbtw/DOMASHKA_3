@@ -1,0 +1,27 @@
+public class Seasons {
+    enum Season {
+        WINTER(-5),
+        SPRING(10),
+        SUMMER(25),
+        AUTUMN(15);
+
+        private final int avgTemperature;
+
+        Season(int avgTemperature) {
+            this.avgTemperature = avgTemperature;
+        }
+
+        public int getAvgTemperature() {
+            return avgTemperature;
+        }
+
+        public String getDescription() {
+            switch (this) {
+                case WINTER:
+                case AUTUMN:
+                    return "Холодное время года";
+                default:
+                    return "Теплое время года";
+            }
+        }
+    }
